@@ -4,6 +4,8 @@ const p1display=document.querySelector('#p1display');
 const p2display=document.querySelector('#p2display'); 
 const resetbutton=document.querySelector('#reset');
 const winningscoreselect=document.querySelector('#playto');
+const dialog1=document.querySelector('#dialog');
+const dialog2=document.querySelector('#dialog1');
 
 let winningscore=5;
 let p1score=0;
@@ -19,6 +21,10 @@ p1button.addEventListener('click',()=>{
             p2display.classList.add('has-text-danger');
             p1button.disabled=true;
             p2button.disabled=true;
+            $( function() {
+                dialog1.style.visibility = "visible";
+                $( "#dialog" ).dialog();
+            } );
         } 
         p1display.textContent=p1score;
     } 
@@ -33,6 +39,10 @@ p2button.addEventListener('click',()=>{
             p1display.classList.add('has-text-danger');
             p1button.disabled=true;
             p2button.disabled=true;
+            $( function() {
+                dialog2.style.visibility = "visible";
+                $( "#dialog1" ).dialog();
+            } );
         } 
         p2display.textContent=p2score;
     } 
