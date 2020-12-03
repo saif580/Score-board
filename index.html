@@ -3,31 +3,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Score Board</title>
-    <style>
-        .winner{
-            color: green;
-        }
-        .loser{
-            color:red;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
 </head>
 <body>
-    <h1><span id="p1display">0</span> to <span id="p2display">0</span> </h1>
-    <select name="" id="playto">
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5" selected="selected">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-    </select>
-    <button id="p1button">+1 Player One</button>
-    <button id="p2button">+1 Player Two</button>
-    <button id='reset'>Reset</button>
-
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-half is-offset-one-quarter">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-2by1">
+                            <img src="https://cdn.shopify.com/s/files/1/0165/8909/5012/articles/scrabble_52763e42-facb-474f-93e4-997c7c5a0b04_940x.jpg?v=1561420682" alt="">
+                        </figure>
+                    </div>
+                    <header class="card-header">
+                      <p class="card-header-title">
+                        SCORE BOARD
+                      </p>
+                    </header>
+                    <div class="card-content">
+                      <div class="content">
+                        <h1 class="title is-1"><span id="p1display">0</span> - <span id="p2display">0</span> </h1>
+                        <p class="subtitle"> Use the buttons below to keep score</p>
+                        <label for="" class="label is-large is-inline">Playing To</label>
+                        <div class="select is-rounded">
+                            <select name="" id="playto">
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5" selected="selected">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        
+                        </div>
+                    </div>
+                    </div>
+                    <footer class="card-footer">
+                        <button class="is-large is-primary button card-footer-item" id="p1button">+1 Player One</button>
+                        <button class="is-large is-info button card-footer-item" id="p2button">+1 Player Two</button>
+                        <button class="is-large is-danger button card-footer-item" id="reset">Reset</button>
+                    </footer>
+                  </div>
+            </div>
+        </div>
+    </div>    
+</section>
+    
+    
     <script src="app.js"></script>
 </body>
 </html>
